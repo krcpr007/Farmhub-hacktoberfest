@@ -19,7 +19,7 @@ function TextFieldx({ children, ...other }) {
             variant="outlined"
             color='tertiary'
             sx={{
-                mb: 2,
+                mb: 1,
                 '& .MuiFormLabel-filled.MuiFormLabel-root': {
                     display: 'none',
                 },
@@ -186,10 +186,10 @@ export default function SignUp({ setTrigger, openSnackbar }) {
                         />
                         <Typography align='center' variant='h6' mt={2}>Create Your Account</Typography>
                         <Avatar
-                            sx={{ mx: 'auto', width: '5em', height: '5em', mt: '1rem' }}
+                            sx={{ mx: 'auto', width: '5em', height: '5em', mt:0 }}
                             src={signUpInfo.avatarSrc}
                         />
-                        <Button variant="contained" color='tertiary' component="label" sx={{ mx: 'auto', my: 3 }}>
+                        <Button variant="contained" color='tertiary' component="label" sx={{ mx: 'auto', mt: 3 }}>
                             Upload your Image
                             <input
                                 hidden
@@ -213,6 +213,7 @@ export default function SignUp({ setTrigger, openSnackbar }) {
                                     label={field.label}
                                     type={field.type}
                                     fullWidth
+                                    sx={{mb:0}}
                                     error={signUpErrors[field.name] !== ''}
                                     helperText={signUpErrors[field.name] ? signUpErrors[field.name] : ' '}
                                 />
@@ -223,7 +224,7 @@ export default function SignUp({ setTrigger, openSnackbar }) {
                             color='tertiary'
                             size='large'
                             type='submit'
-                            sx={{ my: 3 }}
+                            sx={{ my: 0 }}
                         >
                             Submit
                         </Button>
