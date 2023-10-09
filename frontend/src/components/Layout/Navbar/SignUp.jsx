@@ -209,8 +209,8 @@ export default function SignUp({ setTrigger, openSnackbar }) {
                                     value={signUpInfo[field.name]}
                                     onChange={handleChange}
                                     onBlur={validateChange}
-                                    name={field.name}
-                                    label={field.label}
+                                    name={field.name}                                   
+                                    placeholder={field.label}
                                     type={field.type}
                                     fullWidth
                                     sx={{mb:0}}
